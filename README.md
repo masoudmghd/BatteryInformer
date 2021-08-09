@@ -1,7 +1,7 @@
 # BatteryInformer
 
-A simple .net 5.0 windows client which will behave as a reminder to prevent laptop battery overcharged.
-This app use something like **40-80 rule***, but not exactly. :laughing:
+A simple .net 5.0 windows client which will behave as a reminder to prevent laptop battery overcharged (and overdischarged).
+This app use something like **40-80 rule**, but not exactly. :laughing:
 
 > The rule is to keep your battery charged at somewhere between 40% and 80% level at all time. This should prevent the above stated "stresses", which in turn should keep the batteries last longer.
 
