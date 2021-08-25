@@ -32,6 +32,7 @@ namespace BatteryInformer.UI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -42,6 +43,10 @@ namespace BatteryInformer.UI
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Text = "Battery Informer";
             this.notifyIcon.Visible = true;
+            // 
+            // mainTimer
+            // 
+            this.mainTimer.Tick += new System.EventHandler(this.mainTimer_Tick);
             // 
             // MainForm
             // 
@@ -58,5 +63,6 @@ namespace BatteryInformer.UI
         #endregion
 
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        public System.Windows.Forms.Timer mainTimer;
     }
 }

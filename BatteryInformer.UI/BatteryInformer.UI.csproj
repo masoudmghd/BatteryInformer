@@ -4,6 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Battery Informer</AssemblyName>
+    <StartupObject />
+    <Authors>Masoud Moghaddam</Authors>
+    <Company>Sakko</Company>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

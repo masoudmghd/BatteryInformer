@@ -19,52 +19,7 @@ namespace BatteryInformer.UI
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Monitor();
             Application.Run(new MainForm());
-        }
-
-        static void Monitor()
-        {
-            CreateTimer();
-            StartTimer();
-        }
-
-        static void CreateTimer()
-        {
-            _timer = new Timer();
-            _timer.Interval = 5000;
-            _timer.Enabled = true;
-            _timer.Tick += Timer_Tick;
-        }
-
-        static void StartTimer()
-        {
-            _timer.Start();
-        }
-
-        static void StopTimer()
-        {
-            _timer.Stop();
-        }
-
-        private static void Timer_Tick(object sender, EventArgs e)
-        {
-            StopTimer();
-            if (BatteryService.IsCharging())
-            {
-                var value = BatteryService.GetPercentage();
-                if (value > 85 && value < 90)
-                {
-                    var splashScreen = new SplashScreen(value, true);
-                    splashScreen.ShowDialog();
-                }
-                else if (value >= 90)
-                {
-                    var splashScreen = new SplashScreen(value, false);
-                    splashScreen.ShowDialog();
-                }
-            }
-            StartTimer();
         }
     }
 }
