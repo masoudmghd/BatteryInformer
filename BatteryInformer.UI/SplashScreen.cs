@@ -22,7 +22,7 @@ namespace BatteryInformer.UI
         {
             InitializeComponent();
             lblValue.Text = $"Your Battery Level is {value}. Please Disconnet your charger.";
-            timer.Interval = 5000;
+            timer.Interval = 10000;
             timerHard.Interval = 1000;
             if (isAutoClose)
             {
@@ -41,11 +41,7 @@ namespace BatteryInformer.UI
 
         private void timerHard_Tick(object sender, EventArgs e)
         {
-            if (BatteryService.IsCharging())
-            {
-
-            }
-            else
+            if (!BatteryService.IsCharging())
             {
                 this.Close();
             }

@@ -10,7 +10,7 @@ namespace BatteryInformer.UI
         public MainForm()
         {
             InitializeComponent();
-            mainTimer.Interval = 10000;
+            mainTimer.Interval = 60000;
             mainTimer.Enabled = true;
         }
 
@@ -19,6 +19,9 @@ namespace BatteryInformer.UI
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
             notifyIcon.Visible = true;
+            notifyIcon.ContextMenuStrip = contextMenuStrip1;
+            menuItemHighLevel.Checked = true;
+            menuItemLowLevel.Checked = false;
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -28,31 +31,37 @@ namespace BatteryInformer.UI
             if (isCharging)
             {
                 mainTimer.Stop();
-                if (chargeLevel >= 80 && chargeLevel < 85)
+                if (menuItemHighLevel.Checked)
                 {
-                    var splashScreen = new SplashScreen(chargeLevel, true);
-                    splashScreen.ShowDialog();
-                }
-                else if (chargeLevel >= 85)
-                {
-                    var splashScreen = new SplashScreen(chargeLevel, false);
-                    splashScreen.ShowDialog();
+                    if (chargeLevel >= 90 && chargeLevel < 95)
+                    {
+                        var splashScreen = new SplashScreen(chargeLevel, true);
+                        splashScreen.ShowDialog();
+                    }
+                    else if (chargeLevel >= 95)
+                    {
+                        var splashScreen = new SplashScreen(chargeLevel, false);
+                        splashScreen.ShowDialog();
+                    }
                 }
                 mainTimer.Start();
             }
             else
             {
-                if (chargeLevel == 40 || chargeLevel == 35 || chargeLevel == 30)
+                if (menuItemLowLevel.Checked)
                 {
-                    ShowToolTip("Battery Needs You...", $"\r\nYour battery level is {chargeLevel}.\r\nPlease connect your charger.", false);
-                }
-                else if (chargeLevel == 29)
-                {
-                    ShowToolTip("Battery Needs You...", $"\r\nPLEASE CONNECT YOUR CHARGER!!!", true);
-                }
-                else
-                {
-                    isToolTipLoaded = false;
+                    if (chargeLevel == 30 || chargeLevel == 20)
+                    {
+                        ShowToolTip("Battery Needs You...", $"\r\nYour battery level is {chargeLevel}.\r\nPlease connect your charger.", false);
+                    }
+                    else if (chargeLevel == 15)
+                    {
+                        ShowToolTip("Battery Needs You...", $"\r\nPLEASE CONNECT YOUR CHARGER!!!", true);
+                    }
+                    else
+                    {
+                        isToolTipLoaded = false;
+                    }
                 }
             }
         }
@@ -67,6 +76,21 @@ namespace BatteryInformer.UI
                 notifyIcon.ShowBalloonTip(5000);
                 isToolTipLoaded = true;
             }
+        }
+
+        private void menuItemLowLevel_Click(object sender, EventArgs e)
+        {
+            menuItemLowLevel.Checked = !menuItemLowLevel.Checked;
+        }
+
+        private void menuItemHighLevel_Click(object sender, EventArgs e)
+        {
+            menuItemHighLevel.Checked = !menuItemHighLevel.Checked;
+        }
+
+        private void menuItemExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
