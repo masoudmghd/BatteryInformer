@@ -3,7 +3,45 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
+    <UseWindowsForms>True</UseWindowsForms>
+    <AssemblyName>Battery Informer</AssemblyName>
+    <StartupObject />
+    <Authors>Masoud Moghaddam</Authors>
+    <Company>SakkoGroup</Company>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Copyright>Masoud Moghaddam @ SakkoGroup</Copyright>
+    <PackageIcon>car-battery-white.ico</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <UseWPF>True</UseWPF>
+    <ApplicationIcon>car-battery-white.ico</ApplicationIcon>
+    <DebugType>embedded</DebugType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/masoudmghd/BatteryInformer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/masoudmghd/BatteryInformer</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Release 1.1.0.0, Refer to Github releases notes</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="car-battery-white.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="car-battery-white.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
