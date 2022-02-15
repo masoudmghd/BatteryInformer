@@ -21,7 +21,7 @@ namespace BatteryInformer.UI
             notifyIcon.Visible = true;
             notifyIcon.ContextMenuStrip = contextMenuStrip1;
             menuItemHighLevel.Checked = true;
-            menuItemLowLevel.Checked = false;
+            menuItemLowLevel.Checked = true;
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
