@@ -11,7 +11,7 @@ This app use something like **40-80 rule**, but not exactly. :laughing:
 3. Stop monitoring and close notification prior to disconnect power line.
 
 ## Conecept References and Further Readings :
-1. https://www.eyerys.com/articles/40-80-rule-battery-charging-dealing-lithium-based-chemical-problems
-2. https://www.reddit.com/r/GalaxyS7/comments/5wvtdm/is_there_any_truth_to_the_4080_battery_rule
-3. https://www.quora.com/What-is-40-80-rule-for-lithium-ion-batteries
-4. https://robu.in/lithium-ion-battery-vs-li-po-battery
+1. <a href="https://www.eyerys.com/articles/40-80-rule-battery-charging-dealing-lithium-based-chemical-problems">https://www.eyerys.com/articles/40-80-rule-battery-charging-dealing-lithium-based-chemical-problems</a>
+2. <a href="https://www.reddit.com/r/GalaxyS7/comments/5wvtdm/is_there_any_truth_to_the_4080_battery_rule">https://www.reddit.com/r/GalaxyS7/comments/5wvtdm/is_there_any_truth_to_the_4080_battery_rule</a>
+3. <a href="https://www.quora.com/What-is-40-80-rule-for-lithium-ion-batteries">https://www.quora.com/What-is-40-80-rule-for-lithium-ion-batteries</a>
+4. <a href="https://robu.in/lithium-ion-battery-vs-li-po-battery">https://robu.in/lithium-ion-battery-vs-li-po-battery</a>
