@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome to BatteryInformer HomePage
 
-You can use the [editor on GitHub](https://github.com/masoudmghd/BatteryInformer/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+A simple .net 5.0 windows client which will behave as a reminder to prevent laptop battery overcharged (and overdischarged).
+This app use something like **40-80 rule**, but not exactly. :laughing:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+> The rule is to keep your battery charged at somewhere between 40% and 80% level at all time. This should prevent the above stated "stresses", which in turn should keep the batteries last longer.
 
-### Markdown
+## Features : 
+1. 5 Second notification if battery level is between 85 to 90 percent.
+2. Permanent notification if battery level in over 90 percent.
+3. Stop monitoring and close notification prior to disconnect power line.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/masoudmghd/BatteryInformer/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Conecept References and Further Readings :
+1. https://www.eyerys.com/articles/40-80-rule-battery-charging-dealing-lithium-based-chemical-problems
+2. https://www.reddit.com/r/GalaxyS7/comments/5wvtdm/is_there_any_truth_to_the_4080_battery_rule
+3. https://www.quora.com/What-is-40-80-rule-for-lithium-ion-batteries
+4. https://robu.in/lithium-ion-battery-vs-li-po-battery
