@@ -1,6 +1,6 @@
-# BatteryInformer Windows Application
+# BatteryInformer
 
-### Welcome to BatteryInformer HomePage
+## Welcome
 
 A simple .net 5.0 windows client which will behave as a reminder to prevent laptop battery overcharged (and overdischarged).
 This app use something like **40-80 rule**, but not exactly. :laughing:
